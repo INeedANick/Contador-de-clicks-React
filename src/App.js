@@ -1,5 +1,6 @@
 import './App.css';
 import Boton from './componentes/Boton';
+import Contador from './componentes/Contador';
 import logoChibi from "./imagenes/logoChibi.png"
 
 function App() {
@@ -23,6 +24,8 @@ function App() {
 
       </div>
       <div className='contenedor-principal'>
+        <Contador numClicks={4}/>
+
         <Boton 
           texto = "Click"
           esBotonDeClicks={true}
