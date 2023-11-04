@@ -2,15 +2,18 @@ import './App.css';
 import Boton from './componentes/Boton';
 import Contador from './componentes/Contador';
 import logoChibi from "./imagenes/logoChibi.png"
+import { useState } from 'react';
 
 function App() {
 
+  const [numClicks, setNumClicks] = useState(0);
+
   const manejarClcik = () => {
-    console.log("Click")
+    setNumClicks(numClicks + 1);
   }
 
   const reiniciarContador = () => {
-    console.log("Reiniciar")
+    setNumClicks(0);
   }
 
   return (
@@ -24,7 +27,7 @@ function App() {
 
       </div>
       <div className='contenedor-principal'>
-        <Contador numClicks={4}/>
+        <Contador numClicks={numClicks}/>
 
         <Boton 
           texto = "Click"
