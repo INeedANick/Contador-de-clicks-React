@@ -1,9 +1,13 @@
 import React from "react";
 
-function Boton(){
+function Boton({ texto, esBotonDeClicks, manejarClcik }){
     return(
-        <button>
-            
+        <button
+            className={esBotonDeClicks ? "boton-click" : "boton-reiniciar"}
+            onClick={manejarClcik}>
+            {texto}
         </button>
     )
 }
+
+export default Boton;
